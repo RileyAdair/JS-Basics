@@ -5,6 +5,13 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+function isTyler(name) {
+  if(name === 'Tyler'){
+    return true;
+  }
+  return false;
+}
+isTyler(name)
 
 //////////////////PROBLEM 2////////////////////
 
@@ -13,6 +20,10 @@ var name = 'Tyler';
 
 
   //Code Here
+function getName(){
+  var name = prompt('What is your name?');
+  return name;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -23,7 +34,12 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+function welcome() {
+  var username = alert('Welcome, ' + getName());
+  return username;
+}
 
+welcome()
 
 //////////////////PROBLEM 4////////////////////
 
@@ -33,8 +49,17 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
+/*
+An argument is passed in when a function is invoked.
+A parameter is essentially a variable place holder that passes through a function to carry out a task.
 
+var argument = 'Riley'
+function obj(parameter){
+  return parameter;
+}
+obj(argument)
 
+*/
 //////////////////PROBLEM 5////////////////////
 
 
@@ -43,7 +68,14 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+/*
+1. 0
+2. false
+3. NaN
+4. undefined
+5. ""
+6. null
+*/
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,16 +85,20 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+function myName(){
+  return 'Riley';
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+function newMyName() {
+  var newMyName = getName();
+}
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName());
 
 //////////////////PROBLEM 7////////////////////
 
@@ -71,9 +107,15 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+function outerFn(){
+  return function(){
+    return 'Riley';
+  }
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn();
 //Now invoke innerFn.
+
+innerFn();
